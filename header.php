@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +17,19 @@
    <nav>
      <div class="topnav" id="myTopnav">
     <a href="index.php" class="active">Home</a>
-    <a href="signup.php">Sign up</a>
+    <?php
+    if (isset($_SESSION["useruid"])) {
+        echo "<a href='profile.php'>Profile Page</a>";
+        echo "<a href='logout.php'>Log Out</a>";
+    }
+    else {
+        echo "<a href='signup.php'>Sign Up</a>";
+        echo "<a href='login.php'>Log In</a>";
+    }
+    ?>
+    <!-- <a href="signup.php">Sign up</a>
     <a href="login.php">Log In</a>
-    <a href="logout.php">Log Out</a>
+    <a href="logout.php">Log Out</a> -->
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
