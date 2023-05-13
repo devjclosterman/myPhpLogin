@@ -12,9 +12,7 @@
     <input type="password" name="pwdrepeat" placeholder="Repeat password..">
     <button type="Submit" name="submit">Sign up</button>
   </form>
- </section>
- 
-<?php
+  <?php
   if(isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
           echo "<p>Fill in all fields!</p>";
@@ -39,6 +37,9 @@
       }
   }
 ?>
+ </section>
+ 
+
 
  <?php
  include_once 'footer.php';
