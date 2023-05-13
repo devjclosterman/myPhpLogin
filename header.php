@@ -20,7 +20,7 @@ session_start();
     <?php
     if (isset($_SESSION["useruid"])) {
         echo "<a href='profile.php'>Profile Page</a>";
-        echo "<a href='logout.php'>Log Out</a>";
+        echo "<a href='includes/logout.inc.php'>Log Out</a>";
     }
     else {
         echo "<a href='signup.php'>Sign Up</a>";
